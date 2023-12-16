@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 1
+  name: 
+  specialisation: 
+  index: MyString
+  create: MyString
+  destroy: MyString
+  update: MyString
+  show: MyString
+
+two:
+  doctor_id: 1
+  name: 
+  specialisation: 
+  index: MyString
+  create: MyString
+  destroy: MyString
+  update: MyString
+  show: MyString

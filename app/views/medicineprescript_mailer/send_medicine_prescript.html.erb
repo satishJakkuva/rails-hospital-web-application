@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 7px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h3>Your appointment has been completed</h3><br>
+    <h2>Medicine Details</h2>
+    <table>
+        <tr>
+            <th>Medicine Name</th>
+            <th>Quantity of Medicine</th>
+        </tr>
+        <tr>
+          <% @patient_medicines.each do |patient_medicine| %>
+           <tr>
+                <td><%= patient_medicine[:med_name] %></td>
+                <td><%= patient_medicine[:qty] %></td>      
+          </tr>
+        <% end %>
+        
+    </table>
+</body>
+</html>
