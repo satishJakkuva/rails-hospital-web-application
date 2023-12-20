@@ -18,16 +18,16 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-#Sets the environment to run during development mode (Set to production by default)
+# Sets the environment to run during development mode (Set to production by default)
 # set :environment, "development"
 # require File.expand_path('../config/environment', __dir__)
 # tail -f log/cron.log  #to check log in command line
 
-set :output, "log/cron.log" 
+set :output, 'log/cron.log'
 # set environment='development'
 every 1.minutes do
-    # runner "puts Time.now"
-    # runner "puts Rails.env"
-    # runner "puts 'hello world'"
-    runner "Doctor.print"
+  # runner "puts Time.now"
+  # runner "puts Rails.env"
+  # runner "puts 'hello world'"
+  runner 'Doctor.print'
 end

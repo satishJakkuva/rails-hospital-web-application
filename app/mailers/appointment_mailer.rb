@@ -14,11 +14,11 @@ class AppointmentMailer < ApplicationMailer
   def send_appointment_confirmation(appointment)
     @appointment = appointment
     # mail(to: @appointment.patient.email, subject: 'Appointment Confirmation')
-    attachments['JPA.pdf']=File.read('/home/satishj/Downloads/JPA.pdf')
-    attachments['HospitalImage.jpg']=File.read('/home/satishj/Downloads/pexels-pixabay-263402.jpg')
-    mail(to: ['jakkuvasatish7@gmail.com','c77023161@gmail.com','sanyasiraojakkuva123@gmail.com'], 
-    from: 'satishjakkuva123@gmail.com',
-    subject: 'appointment confirmation')
+    attachments['JPA.pdf'] = File.read('/home/satishj/Downloads/JPA.pdf')
+    attachments['HospitalImage.jpg'] = File.read('/home/satishj/Downloads/pexels-pixabay-263402.jpg')
+    mail(to: ['jakkuvasatish7@gmail.com', 'c77023161@gmail.com', 'sanyasiraojakkuva123@gmail.com'],
+         from: 'satishjakkuva123@gmail.com',
+         subject: 'appointment confirmation')
   end
   # def send_appointment_update(appointment)
   #   previous_appointment_date = appointment.appointment_date_before_last_save
@@ -26,5 +26,4 @@ class AppointmentMailer < ApplicationMailer
   #   @appointment=appointment
   #   mail(to:@appointment.patient.email,subject: 'Appointment update')
   # end
-
 end

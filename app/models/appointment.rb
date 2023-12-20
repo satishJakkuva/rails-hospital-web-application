@@ -8,7 +8,6 @@ class Appointment
   # field :patient_id, type: BSON::ObjectId
   belongs_to :doctor
   belongs_to :patient
-  
 
   # belongs_to :doctor # class_name:'Doctor', foreign_key: 'doctor_id'
   # belongs_to :patient #class_name:'Patient', foreign_key: 'patient_id'

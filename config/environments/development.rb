@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -9,26 +9,25 @@ Rails.application.configure do
   config.enable_reloading = true
 
   # smtp configuration
-#   config.action_mailer.delivery_method = :smtp
-# config.action_mailer.smtp_settings = {
-#   :user_name => '83737bc497cd02',
-#   :password => '********2929',
-#   :address => 'sandbox.smtp.mailtrap.io',
-#   :host => 'sandbox.smtp.mailtrap.io',
-#   :port => '2525',
-#   :authentication => :cram_md5
-# }
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            'satishjakkuva123@gmail.com',
-  password:             'jsfu bhrp mggv wiml',
-  authentication:       'plain',
-  enable_starttls_auto: true
-}
-
+  #   config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :user_name => '83737bc497cd02',
+  #   :password => '********2929',
+  #   :address => 'sandbox.smtp.mailtrap.io',
+  #   :host => 'sandbox.smtp.mailtrap.io',
+  #   :port => '2525',
+  #   :authentication => :cram_md5
+  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    user_name: 'satishjakkuva123@gmail.com',
+    password: 'jsfu bhrp mggv wiml',
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -41,10 +40,10 @@ config.action_mailer.smtp_settings = {
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp/caching-dev.txt").exist?
+  if Rails.root.join('tmp/caching-dev.txt').exist?
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -68,7 +67,6 @@ config.action_mailer.smtp_settings = {
 
   # Highlight code that enqueued background job in logs.
   config.active_job.verbose_enqueue_logs = true
-
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

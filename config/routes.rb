@@ -21,32 +21,32 @@ Rails.application.routes.draw do
   # get 'doctors/destroy'
   resources :appointments do
     member do
-      get "appointment_completed",to: "appointments#appointment_completion"
+      get 'appointment_completed', to: 'appointments#appointment_completion'
     end
   end
   resources :doctors do
     member do
-      get 'patients_by_a_doctor',to: 'doctors#patients_by_doctor'
+      get 'patients_by_a_doctor', to: 'doctors#patients_by_doctor'
     end
   end
   resources :patients do
     member do
-      get "doctors_by_a_patient",to: "patients#doctors_by_patient"
-      get "medicines_of_a_patient",to: "patients#medicine_inventories_by_patient"
-      get "patient_medicines_by_a_doctor",to: "patients#patient_medicines_by_doctor"
-
+      get 'doctors_by_a_patient', to: 'patients#doctors_by_patient'
+      get 'medicines_of_a_patient', to: 'patients#medicine_inventories_by_patient'
+      get 'patient_medicines_by_a_doctor', to: 'patients#patient_medicines_by_doctor'
     end
   end
-  resources  :medicines_inventories do
+  resources :medicines_inventories do
     member do
-      get "patients_of_a_medicine",to: "medicines_inventories#patients_by_medicine_inventory"
+      get 'patients_of_a_medicine', to: 'medicines_inventories#patients_by_medicine_inventory'
     end
   end
+  resources :patient_medicines
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  get 'up' => 'rails/health#show', as: :rails_health_check
 
   # Defines the root path route ("/")
   # root "posts#index"
